@@ -140,6 +140,8 @@ HTTPResponse& HTTPResponse::SetBegin(int status, std::string_view protocol)
         case 207: status_phrase = "Multi-Status"; break;
         case 208: status_phrase = "Already Reported"; break;
 
+        case 218: status_phrase = "This Is Fine"; break;
+
         case 226: status_phrase = "IM Used"; break;
 
         case 300: status_phrase = "Multiple Choices"; break;
