@@ -76,8 +76,10 @@ target_link_libraries(cppserver ${LINKLIBS} asio)
 list(APPEND INSTALL_TARGETS cppserver)
 list(APPEND LINKLIBS cppserver)
 
+set(BUILD_ADDITIONAL_STUFF FALSE)
+
 # Additional module components: benchmarks, examples, plugins, tests, tools and install
-if(NOT CPPSERVER_MODULE)
+if(NOT CPPSERVER_MODULE AND BUILD_ADDITIONAL_STUFF)
 
   # Proto library
   file(GLOB_RECURSE PROTO_HEADER_FILES "proto/*.h")
