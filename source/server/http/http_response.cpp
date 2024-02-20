@@ -171,6 +171,9 @@ HTTPResponse& HTTPResponse::SetBegin(int status, std::string_view protocol)
         case 416: status_phrase = "Range Not Satisfiable"; break;
         case 417: status_phrase = "Expectation Failed"; break;
 
+        case 418: status_phrase = "I’m A Teapot"; break;
+        case 420: status_phrase = "Enhance Your Calm"; break;
+
         case 421: status_phrase = "Misdirected Request"; break;
         case 422: status_phrase = "Unprocessable Entity"; break;
         case 423: status_phrase = "Locked"; break;
@@ -183,6 +186,8 @@ HTTPResponse& HTTPResponse::SetBegin(int status, std::string_view protocol)
         case 431: status_phrase = "Request Header Fields Too Large"; break;
 
         case 451: status_phrase = "Unavailable For Legal Reasons"; break;
+
+        case 444: status_phrase = "The 4th Dimension Rejects You"; break;
 
         case 500: status_phrase = "Internal Server Error"; break;
         case 501: status_phrase = "Not Implemented"; break;
